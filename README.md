@@ -1,2 +1,2 @@
 # Simulation-of-the-elevator-operation-control-system
-![use case](https://user-images.githubusercontent.com/72338439/140603795-cdfd8e4d-7908-455e-8a2c-5429bb1a98a5.png)
+![Blank diagram](https://user-images.githubusercontent.com/72338439/140605683-7631da37-3229-447a-a7cd-05fee6077091.png)
