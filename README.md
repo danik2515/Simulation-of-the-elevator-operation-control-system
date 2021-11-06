@@ -1,2 +1,2 @@
 # Simulation-of-the-elevator-operation-control-system
-![alt text](screenshots/use case diagram.pdf "use case")
+![use case](screenshots/use case diagram.pdf)
