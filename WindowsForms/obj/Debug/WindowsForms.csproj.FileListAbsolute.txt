@@ -1,0 +1,15 @@
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe.config
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.pdb
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csprojResolveAssemblyReference.cache
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.Cache
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.exe
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.pdb
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.StartForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.ConfigForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.SimulationForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.AccelerationForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.InformationForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.AddHumanForm.resources
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.HumanStatusForm.resources
