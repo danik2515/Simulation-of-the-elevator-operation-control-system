@@ -7,5 +7,7 @@ using System.Threading.Tasks;
 namespace Presenters.IViews {
     public interface ISimulationView {
         void DrawFloors(int countOfFloor,int countOfElevator);
+        void TimeUpdate(double currentTime);
+        void DrawElevator(int number, double position);
     }
 }

@@ -6,11 +6,25 @@ using System.Threading.Tasks;
 
 namespace Model.Entities {
     public class Elevator {
-        int targetFloor { set; get; }
-        double currentSpeed { get; set; }
+        public static List<Elevator> elevator;
+        public int targetFloor { set; get; }
+        public double currentSpeed { get; set; }
+        public int currentWeight { get; set; }
+        public int numberElevator { get; set; }
+        public double position { get; set; }
+        public Elevator(int num) {
+            numberElevator = num;
+            position = 1;
+        }
 
-        public Elevator() {
+        public void Move() {
 
+        }
+        public static void Create() {
+            elevator = new List<Elevator>();
+            for (int num = 0; num <= ConfigData.countOfElevator; num++) {
+                elevator.Add(new Elevator(num));
+            }
         }
     }
 }

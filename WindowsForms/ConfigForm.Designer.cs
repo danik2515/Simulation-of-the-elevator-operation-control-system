@@ -134,9 +134,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(13, 286);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 16);
+            this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Speed value";
+            this.label7.Text = "Max speed value";
             // 
             // label8
             // 
@@ -167,7 +167,6 @@
             this.speedValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.speedValueTextBox.TabIndex = 12;
             this.speedValueTextBox.Text = "3";
-            
             // 
             // accelerationValueTextBox
             // 

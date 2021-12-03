@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -36,6 +37,7 @@
             this.fireAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownButton = new System.Windows.Forms.Button();
             this.pictureBoxFloor = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).BeginInit();
             this.SuspendLayout();
@@ -143,6 +145,11 @@
             this.pictureBoxFloor.TabIndex = 6;
             this.pictureBoxFloor.TabStop = false;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // SimulationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +188,6 @@
         private System.Windows.Forms.ToolStripMenuItem addHumansToolStripMenuItem;
         private System.Windows.Forms.Button ShutdownButton;
         private System.Windows.Forms.PictureBox pictureBoxFloor;
+        private System.Windows.Forms.Timer timer;
     }
 }
