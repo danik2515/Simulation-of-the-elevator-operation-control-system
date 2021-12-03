@@ -43,5 +43,9 @@ namespace WindowsForms {
             InformationForm informationForm = new InformationForm();
             informationForm.Show();
         }
+
+        private void SimulationForm_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
+        }
     }
 }

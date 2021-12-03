@@ -24,16 +24,15 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
-            this.exitLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hnwnhnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlHumalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accelerateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fireAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlHumalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addHumansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fireAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -42,25 +41,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(604, 4);
+            this.label1.Location = new System.Drawing.Point(962, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Simulation";
-            // 
-            // exitLabel
-            // 
-            this.exitLabel.AutoSize = true;
-            this.exitLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitLabel.Location = new System.Drawing.Point(1047, -1);
-            this.exitLabel.Name = "exitLabel";
-            this.exitLabel.Size = new System.Drawing.Size(20, 24);
-            this.exitLabel.TabIndex = 2;
-            this.exitLabel.Text = "x";
-            this.exitLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.exitLabel.UseMnemonic = false;
-            this.exitLabel.Click += new System.EventHandler(this.exitLabel_Click);
             // 
             // menuStrip1
             // 
@@ -84,15 +69,6 @@
             this.hnwnhnToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.hnwnhnToolStripMenuItem.Text = "Control process";
             // 
-            // controlHumalToolStripMenuItem
-            // 
-            this.controlHumalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusToolStripMenuItem,
-            this.addHumansToolStripMenuItem});
-            this.controlHumalToolStripMenuItem.Name = "controlHumalToolStripMenuItem";
-            this.controlHumalToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.controlHumalToolStripMenuItem.Text = " Control human system";
-            // 
             // accelerateToolStripMenuItem
             // 
             this.accelerateToolStripMenuItem.Name = "accelerateToolStripMenuItem";
@@ -113,25 +89,34 @@
             this.showInformationToolStripMenuItem.Text = "Show information";
             this.showInformationToolStripMenuItem.Click += new System.EventHandler(this.showInformationToolStripMenuItem_Click);
             // 
-            // fireAlarmToolStripMenuItem
+            // controlHumalToolStripMenuItem
             // 
-            this.fireAlarmToolStripMenuItem.Name = "fireAlarmToolStripMenuItem";
-            this.fireAlarmToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.fireAlarmToolStripMenuItem.Text = "Fire alarm";
+            this.controlHumalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusToolStripMenuItem,
+            this.addHumansToolStripMenuItem});
+            this.controlHumalToolStripMenuItem.Name = "controlHumalToolStripMenuItem";
+            this.controlHumalToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
+            this.controlHumalToolStripMenuItem.Text = " Control human system";
             // 
             // statusToolStripMenuItem
             // 
             this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
-            this.statusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.statusToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.statusToolStripMenuItem.Text = "Show Status";
             this.statusToolStripMenuItem.Click += new System.EventHandler(this.statusToolStripMenuItem_Click);
             // 
             // addHumansToolStripMenuItem
             // 
             this.addHumansToolStripMenuItem.Name = "addHumansToolStripMenuItem";
-            this.addHumansToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addHumansToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.addHumansToolStripMenuItem.Text = "Add humans";
             this.addHumansToolStripMenuItem.Click += new System.EventHandler(this.addHumansToolStripMenuItem_Click);
+            // 
+            // fireAlarmToolStripMenuItem
+            // 
+            this.fireAlarmToolStripMenuItem.Name = "fireAlarmToolStripMenuItem";
+            this.fireAlarmToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.fireAlarmToolStripMenuItem.Text = "Fire alarm";
             // 
             // ShutdownButton
             // 
@@ -151,12 +136,12 @@
             this.ClientSize = new System.Drawing.Size(1067, 463);
             this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.exitLabel);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SimulationForm";
             this.Text = "SimulationForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SimulationForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -167,7 +152,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label exitLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hnwnhnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accelerateToolStripMenuItem;

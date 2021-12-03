@@ -24,29 +24,28 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
-            this.exitLabel = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.countOfElevatorTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.countOfFloorsTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.maxWeightTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.speedValueTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.accelerationValueTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.strategyRadioButton = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
             this.RunButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ruleTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.infoLabel1 = new System.Windows.Forms.Label();
+            this.infoLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,28 +58,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Config Panel";
             // 
-            // exitLabel
+            // countOfElevatorTextBox
             // 
-            this.exitLabel.AutoSize = true;
-            this.exitLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitLabel.Location = new System.Drawing.Point(520, 0);
-            this.exitLabel.Name = "exitLabel";
-            this.exitLabel.Size = new System.Drawing.Size(20, 24);
-            this.exitLabel.TabIndex = 1;
-            this.exitLabel.Text = "x";
-            this.exitLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.exitLabel.UseMnemonic = false;
-            this.exitLabel.Click += new System.EventHandler(this.exitLabel_Click);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(185, 108);
-            this.maskedTextBox1.Mask = "000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PromptChar = ' ';
-            this.maskedTextBox1.Size = new System.Drawing.Size(24, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.countOfElevatorTextBox.Location = new System.Drawing.Point(185, 108);
+            this.countOfElevatorTextBox.Mask = "000";
+            this.countOfElevatorTextBox.Name = "countOfElevatorTextBox";
+            this.countOfElevatorTextBox.PromptChar = ' ';
+            this.countOfElevatorTextBox.Size = new System.Drawing.Size(24, 20);
+            this.countOfElevatorTextBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -112,14 +97,14 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Count of floors";
             // 
-            // maskedTextBox2
+            // countOfFloorsTextBox
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(185, 134);
-            this.maskedTextBox2.Mask = "000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.PromptChar = ' ';
-            this.maskedTextBox2.Size = new System.Drawing.Size(24, 20);
-            this.maskedTextBox2.TabIndex = 6;
+            this.countOfFloorsTextBox.Location = new System.Drawing.Point(185, 134);
+            this.countOfFloorsTextBox.Mask = "000";
+            this.countOfFloorsTextBox.Name = "countOfFloorsTextBox";
+            this.countOfFloorsTextBox.PromptChar = ' ';
+            this.countOfFloorsTextBox.Size = new System.Drawing.Size(24, 20);
+            this.countOfFloorsTextBox.TabIndex = 6;
             // 
             // label5
             // 
@@ -161,32 +146,32 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Acceleration value";
             // 
-            // maskedTextBox3
+            // maxWeightTextBox
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(185, 261);
-            this.maskedTextBox3.Mask = "000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.PromptChar = ' ';
-            this.maskedTextBox3.Size = new System.Drawing.Size(24, 20);
-            this.maskedTextBox3.TabIndex = 11;
+            this.maxWeightTextBox.Location = new System.Drawing.Point(185, 261);
+            this.maxWeightTextBox.Mask = "000";
+            this.maxWeightTextBox.Name = "maxWeightTextBox";
+            this.maxWeightTextBox.PromptChar = ' ';
+            this.maxWeightTextBox.Size = new System.Drawing.Size(24, 20);
+            this.maxWeightTextBox.TabIndex = 11;
             // 
-            // maskedTextBox4
+            // speedValueTextBox
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(185, 286);
-            this.maskedTextBox4.Mask = "000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.PromptChar = ' ';
-            this.maskedTextBox4.Size = new System.Drawing.Size(24, 20);
-            this.maskedTextBox4.TabIndex = 12;
+            this.speedValueTextBox.Location = new System.Drawing.Point(185, 286);
+            this.speedValueTextBox.Mask = "000";
+            this.speedValueTextBox.Name = "speedValueTextBox";
+            this.speedValueTextBox.PromptChar = ' ';
+            this.speedValueTextBox.Size = new System.Drawing.Size(24, 20);
+            this.speedValueTextBox.TabIndex = 12;
             // 
-            // maskedTextBox5
+            // accelerationValueTextBox
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(185, 311);
-            this.maskedTextBox5.Mask = "000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.PromptChar = ' ';
-            this.maskedTextBox5.Size = new System.Drawing.Size(24, 20);
-            this.maskedTextBox5.TabIndex = 13;
+            this.accelerationValueTextBox.Location = new System.Drawing.Point(185, 311);
+            this.accelerationValueTextBox.Mask = "000";
+            this.accelerationValueTextBox.Name = "accelerationValueTextBox";
+            this.accelerationValueTextBox.PromptChar = ' ';
+            this.accelerationValueTextBox.Size = new System.Drawing.Size(24, 20);
+            this.accelerationValueTextBox.TabIndex = 13;
             // 
             // label9
             // 
@@ -198,17 +183,17 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Choice of strategy:";
             // 
-            // radioButton1
+            // strategyRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(134, 167);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 17);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Min time";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.strategyRadioButton.AutoSize = true;
+            this.strategyRadioButton.Checked = true;
+            this.strategyRadioButton.Location = new System.Drawing.Point(134, 167);
+            this.strategyRadioButton.Name = "strategyRadioButton";
+            this.strategyRadioButton.Size = new System.Drawing.Size(64, 17);
+            this.strategyRadioButton.TabIndex = 15;
+            this.strategyRadioButton.TabStop = true;
+            this.strategyRadioButton.Text = "Min time";
+            this.strategyRadioButton.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -221,23 +206,23 @@
             this.radioButton2.Text = "Min idling";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.Location = new System.Drawing.Point(16, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(16, 366);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 17;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // loadButton
             // 
-            this.button2.Location = new System.Drawing.Point(134, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
+            this.loadButton.Location = new System.Drawing.Point(134, 366);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(75, 23);
+            this.loadButton.TabIndex = 18;
+            this.loadButton.Text = "Load";
+            this.loadButton.UseVisualStyleBackColor = true;
             // 
             // RunButton
             // 
@@ -249,13 +234,13 @@
             this.RunButton.UseVisualStyleBackColor = true;
             this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
             // 
-            // textBox1
+            // ruleTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(279, 92);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 175);
-            this.textBox1.TabIndex = 20;
+            this.ruleTextBox.Location = new System.Drawing.Point(279, 92);
+            this.ruleTextBox.Multiline = true;
+            this.ruleTextBox.Name = "ruleTextBox";
+            this.ruleTextBox.Size = new System.Drawing.Size(212, 175);
+            this.ruleTextBox.TabIndex = 20;
             // 
             // label10
             // 
@@ -267,25 +252,25 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Rules";
             // 
-            // label11
+            // infoLabel1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(236, 270);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(297, 16);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "human <start floor> <end floor> <count of people>";
+            this.infoLabel1.AutoSize = true;
+            this.infoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.infoLabel1.Location = new System.Drawing.Point(236, 270);
+            this.infoLabel1.Name = "infoLabel1";
+            this.infoLabel1.Size = new System.Drawing.Size(301, 16);
+            this.infoLabel1.TabIndex = 22;
+            this.infoLabel1.Text = "/human <start floor> <end floor> <count of people>";
             // 
-            // label12
+            // infoLabel2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(236, 286);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 16);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "firealarm <start time> <duration>";
+            this.infoLabel2.AutoSize = true;
+            this.infoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.infoLabel2.Location = new System.Drawing.Point(236, 286);
+            this.infoLabel2.Name = "infoLabel2";
+            this.infoLabel2.Size = new System.Drawing.Size(199, 16);
+            this.infoLabel2.TabIndex = 23;
+            this.infoLabel2.Text = "/firealarm <start time> <duration>";
             // 
             // ConfigForm
             // 
@@ -293,33 +278,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(540, 443);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.infoLabel2);
+            this.Controls.Add(this.infoLabel1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ruleTextBox);
             this.Controls.Add(this.RunButton);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.loadButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.strategyRadioButton);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.maskedTextBox5);
-            this.Controls.Add(this.maskedTextBox4);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.accelerationValueTextBox);
+            this.Controls.Add(this.speedValueTextBox);
+            this.Controls.Add(this.maxWeightTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.countOfFloorsTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.exitLabel);
+            this.Controls.Add(this.countOfElevatorTextBox);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ConfigForm";
             this.Text = "ConfigForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConfigForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,28 +315,27 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label exitLabel;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox countOfElevatorTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox countOfFloorsTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        private System.Windows.Forms.MaskedTextBox maxWeightTextBox;
+        private System.Windows.Forms.MaskedTextBox speedValueTextBox;
+        private System.Windows.Forms.MaskedTextBox accelerationValueTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton strategyRadioButton;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button RunButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ruleTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label infoLabel1;
+        private System.Windows.Forms.Label infoLabel2;
     }
 }
