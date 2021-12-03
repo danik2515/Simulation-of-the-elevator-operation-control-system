@@ -52,15 +52,17 @@ namespace WindowsForms {
             Application.Exit();
         }
 
-        public void DrawFloors(int countOfFloor) {
+        public void DrawFloors(int countOfFloor,int countOfElevator) {
             int sizeX = 200;
             int sizeY = 50; 
             Bitmap wall = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\wall.png");
-            Image part = new Bitmap(828,1020);
+            Image part = new Bitmap(1405,1020);
             Graphics g = Graphics.FromImage(part);
-            for(int i = 0; i < countOfFloor; i++) {
-                g.DrawImage(wall, 0, 965-i*(sizeY), new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
-                pictureBoxFloor.Image = part;
+            for (int i = 0; i < countOfFloor; i++) {
+                for (int j = 0; j < countOfElevator; j++) {
+                    g.DrawImage(wall, 0+j*sizeX, 965 - i * (sizeY), new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+                    pictureBoxFloor.Image = part;
+                }
             }
         }
 

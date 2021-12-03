@@ -13,7 +13,7 @@ namespace Presenters {
             _simulationView = simulationView;
         }
         public void AddFloors() {
-            _simulationView.DrawFloors(ConfigData.countOfFloor);
+            _simulationView.DrawFloors(ConfigData.countOfFloor,ConfigData.countOfElevator);
         }
     }
 }

@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Presenters.IViews {
     public interface ISimulationView {
-        void DrawFloors(int countOfFloor);
+        void DrawFloors(int countOfFloor,int countOfElevator);
     }
 }

@@ -36,7 +36,6 @@
             this.fireAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownButton = new System.Windows.Forms.Button();
             this.pictureBoxFloor = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).BeginInit();
             this.SuspendLayout();
@@ -140,16 +139,9 @@
             this.pictureBoxFloor.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFloor.InitialImage")));
             this.pictureBoxFloor.Location = new System.Drawing.Point(470, 27);
             this.pictureBoxFloor.Name = "pictureBoxFloor";
-            this.pictureBoxFloor.Size = new System.Drawing.Size(828, 1020);
+            this.pictureBoxFloor.Size = new System.Drawing.Size(1405, 1020);
             this.pictureBoxFloor.TabIndex = 6;
             this.pictureBoxFloor.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(643, 888);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 60);
-            this.panel1.TabIndex = 7;
             // 
             // SimulationForm
             // 
@@ -158,7 +150,6 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxFloor);
             this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.label1);
@@ -190,6 +181,5 @@
         private System.Windows.Forms.ToolStripMenuItem addHumansToolStripMenuItem;
         private System.Windows.Forms.Button ShutdownButton;
         private System.Windows.Forms.PictureBox pictureBoxFloor;
-        private System.Windows.Forms.Panel panel1;
     }
 }
