@@ -66,6 +66,7 @@
             this.countOfElevatorTextBox.PromptChar = ' ';
             this.countOfElevatorTextBox.Size = new System.Drawing.Size(24, 20);
             this.countOfElevatorTextBox.TabIndex = 2;
+            this.countOfElevatorTextBox.Text = "1";
             // 
             // label2
             // 
@@ -105,6 +106,7 @@
             this.countOfFloorsTextBox.PromptChar = ' ';
             this.countOfFloorsTextBox.Size = new System.Drawing.Size(24, 20);
             this.countOfFloorsTextBox.TabIndex = 6;
+            this.countOfFloorsTextBox.Text = "3";
             // 
             // label5
             // 
@@ -154,6 +156,7 @@
             this.maxWeightTextBox.PromptChar = ' ';
             this.maxWeightTextBox.Size = new System.Drawing.Size(24, 20);
             this.maxWeightTextBox.TabIndex = 11;
+            this.maxWeightTextBox.Text = "5";
             // 
             // speedValueTextBox
             // 
@@ -163,6 +166,8 @@
             this.speedValueTextBox.PromptChar = ' ';
             this.speedValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.speedValueTextBox.TabIndex = 12;
+            this.speedValueTextBox.Text = "3";
+            
             // 
             // accelerationValueTextBox
             // 
@@ -172,6 +177,7 @@
             this.accelerationValueTextBox.PromptChar = ' ';
             this.accelerationValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.accelerationValueTextBox.TabIndex = 13;
+            this.accelerationValueTextBox.Text = "1";
             // 
             // label9
             // 

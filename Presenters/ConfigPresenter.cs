@@ -33,6 +33,7 @@ namespace Presenters {
                     ConfigData.accelerationOfElevator>=1
                     ) {
                     _configView.Confirm();
+                    GlobalParametrs.StartTime();
                 } else {
                     _configView.ShowErrorMessage("Некорректные данные");
                 }

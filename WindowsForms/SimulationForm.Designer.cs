@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hnwnhnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -34,7 +35,10 @@
             this.addHumansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fireAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownButton = new System.Windows.Forms.Button();
+            this.pictureBoxFloor = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +59,7 @@
             this.fireAlarmToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,20 +124,42 @@
             // 
             // ShutdownButton
             // 
-            this.ShutdownButton.Location = new System.Drawing.Point(980, 428);
+            this.ShutdownButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.ShutdownButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ShutdownButton.Location = new System.Drawing.Point(1800, 1006);
             this.ShutdownButton.Name = "ShutdownButton";
             this.ShutdownButton.Size = new System.Drawing.Size(75, 23);
             this.ShutdownButton.TabIndex = 5;
             this.ShutdownButton.Text = "Shutdown";
-            this.ShutdownButton.UseVisualStyleBackColor = true;
+            this.ShutdownButton.UseVisualStyleBackColor = false;
             this.ShutdownButton.Click += new System.EventHandler(this.ShutdownButton_Click);
+            // 
+            // pictureBoxFloor
+            // 
+            this.pictureBoxFloor.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxFloor.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFloor.InitialImage")));
+            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 27);
+            this.pictureBoxFloor.Name = "pictureBoxFloor";
+            this.pictureBoxFloor.Size = new System.Drawing.Size(828, 1020);
+            this.pictureBoxFloor.TabIndex = 6;
+            this.pictureBoxFloor.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(643, 888);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 60);
+            this.panel1.TabIndex = 7;
             // 
             // SimulationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1067, 463);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxFloor);
             this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -144,6 +170,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SimulationForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addHumansToolStripMenuItem;
         private System.Windows.Forms.Button ShutdownButton;
+        private System.Windows.Forms.PictureBox pictureBoxFloor;
+        private System.Windows.Forms.Panel panel1;
     }
 }
