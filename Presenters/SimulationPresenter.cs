@@ -18,16 +18,16 @@ namespace Presenters {
             _simulationView.DrawFloors(ConfigData.countOfFloor,ConfigData.countOfElevator);
         }
         public void TimeSet() {
-                _simulationView.TimeUpdate(GlobalParametrs.time);
+            GlobalParametrs.CountTime();
         }
         public void AddElevator() {
-            if (Elevator.elevator==null) {
-                Elevator.Create();
-            }
-            for (int num = 0; num < ConfigData.countOfElevator; num++) {
-                _simulationView.DrawElevator(num, Elevator.elevator[num].position);
+            if (Elevator.elevator != null) {
+                for (int num = 0; num < ConfigData.countOfElevator; num++) {
+                    _simulationView.DrawElevator(num, Elevator.elevator[num].position);
+                }
             }
         }
+        
         
     }
 }

@@ -124,9 +124,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(13, 261);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 16);
+            this.label6.Size = new System.Drawing.Size(125, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Max weight";
+            this.label6.Text = "Max weight (human)";
             // 
             // label7
             // 
@@ -137,6 +137,7 @@
             this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Max speed value";
+            
             // 
             // label8
             // 

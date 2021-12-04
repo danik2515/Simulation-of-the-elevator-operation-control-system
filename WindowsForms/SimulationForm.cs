@@ -13,13 +13,19 @@ using System.Threading;
 namespace WindowsForms {
     public partial class SimulationForm : Form,ISimulationView {
         SimulationPresenter presenter { get; set; }
-        double time;
-        static Image part = new Bitmap(1405, 1020);
-        static Graphics g = Graphics.FromImage(part);
+        Image elevator;
+        Image wall;
+        
+        Image part;
+        Graphics g;
         public SimulationForm() {
             InitializeComponent();
+            part = new Bitmap(1405, 1020);
+            g = Graphics.FromImage(part);
+            elevator = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\closeElevator.png");
+            wall = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\wall.png");
             presenter = new SimulationPresenter(this);
-            presenter.AddFloors();
+            
             presenter.AddElevator();
         }
 
@@ -59,11 +65,11 @@ namespace WindowsForms {
 
         public void DrawFloors(int countOfFloor,int countOfElevator) {
             int sizeX = 200;
-            int sizeY = 50; 
-            Bitmap wall = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\wall.png");
+            int sizeY = 50;
+
             for (int i = 0; i < countOfFloor; i++) {
                 for (int j = 0; j < countOfElevator; j++) {
-                    g.DrawImage(wall, 0+j*sizeX, 965 - i * (sizeY), new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+                    g.DrawImage(wall, 0 + j * sizeX, 965 - i * (sizeY), new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
                     pictureBoxFloor.Image = part;
                 }
             }
@@ -71,22 +77,23 @@ namespace WindowsForms {
         public void DrawElevator(int numberElevator,double position) {
             int sizeX = 36;
             int sizeY = 50;
-            Bitmap elevator = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\closeElevator.png");
+            Console.WriteLine(position.ToString());
             g.DrawImage(elevator, 200-sizeX+numberElevator*(200),1015-sizeY*(float)position, new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
-            pictureBoxFloor.Image = part;
-              
-
-
-        }
-        public void TimeUpdate(double currentTime) {
-            time = currentTime;
-            Console.WriteLine(time.ToString());
             
+            pictureBoxFloor.Image = part;
+            
+
+
+
+
         }
+        
 
         private void timer_Tick(object sender, EventArgs e) {
             presenter.TimeSet();
+            presenter.AddFloors();
             presenter.AddElevator();
+            
         }
     }
 }

@@ -35,10 +35,10 @@ namespace Presenters {
                     _configView.Confirm();
                     GlobalParametrs.StartTime();
                 } else {
-                    _configView.ShowErrorMessage("Некорректные данные");
+                    _configView.ShowErrorMessage("Uncorrect data");
                 }
             } else {
-                _configView.ShowErrorMessage("Введите данные");
+                _configView.ShowErrorMessage("Input data");
             }
         }
     }
