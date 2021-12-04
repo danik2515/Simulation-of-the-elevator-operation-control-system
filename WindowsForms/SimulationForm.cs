@@ -77,7 +77,6 @@ namespace WindowsForms {
         public void DrawElevator(int numberElevator,double position) {
             int sizeX = 36;
             int sizeY = 50;
-            Console.WriteLine(position.ToString());
             g.DrawImage(elevator, 200-sizeX+numberElevator*(200),1015-sizeY*(float)position, new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
             
             pictureBoxFloor.Image = part;

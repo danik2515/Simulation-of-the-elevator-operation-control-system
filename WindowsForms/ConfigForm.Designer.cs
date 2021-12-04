@@ -137,7 +137,6 @@
             this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Max speed value";
-            
             // 
             // label8
             // 
@@ -177,7 +176,7 @@
             this.accelerationValueTextBox.PromptChar = ' ';
             this.accelerationValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.accelerationValueTextBox.TabIndex = 13;
-            this.accelerationValueTextBox.Text = "1";
+            this.accelerationValueTextBox.Text = "50";
             // 
             // label9
             // 

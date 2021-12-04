@@ -43,8 +43,8 @@
     <Compile Include="ConfigService.cs" />
     <Compile Include="Entities\ConfigData.cs" />
     <Compile Include="Entities\Elevator.cs" />
-    <Compile Include="Entities\Floor.cs" />
     <Compile Include="Entities\GlobalParametrs.cs" />
+    <Compile Include="Entities\Human.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

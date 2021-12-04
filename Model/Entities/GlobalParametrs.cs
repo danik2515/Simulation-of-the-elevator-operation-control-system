@@ -13,7 +13,7 @@ namespace Model.Entities {
         public static void CountTime() {
             if (Elevator.elevator == null) {
                 Elevator.Create();
-                Elevator.elevator[0].targetFloor = 20;
+               
                 
             }
             time += accelaration*0.1;
@@ -21,6 +21,7 @@ namespace Model.Entities {
             for (int num = 0; num < ConfigData.countOfElevator; num++) {
                 Elevator.elevator[num].Move();
             }
+            Human.Wait();
         }
         public static void StartTime() {
             accelaration = 1.0;

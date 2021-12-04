@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Model.Entities {
     public class Elevator {
         public static List<Elevator> elevator;
-        public static double eps = 10e-6;
+        public List<Human> human;
         public static double acc = (double)ConfigData.accelerationOfElevator / 100;
         public int targetFloor { set; get; }
         public double currentSpeed { get; set; }
@@ -67,6 +67,7 @@ namespace Model.Entities {
                 }else {
                     position = targetFloor;
                     isMove = false;
+
                 }
             }
        
@@ -76,7 +77,15 @@ namespace Model.Entities {
             elevator = new List<Elevator>();
             for (int num = 0; num <= ConfigData.countOfElevator; num++) {
                 elevator.Add(new Elevator(num));
+   
             }
+
+            Elevator.elevator[0].targetFloor = 4;
+            Elevator.elevator[1].targetFloor = 16;
+            Elevator.elevator[2].targetFloor = 20;
+            Elevator.elevator[3].targetFloor = 10;
+
+
         }
     }
 }
