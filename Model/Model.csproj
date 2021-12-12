@@ -40,12 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\ConfigData.cs" />
+    <Compile Include="Entities\SimulationSystem.cs" />
+    <Compile Include="Repositories\ConfigData.cs" />
     <Compile Include="Entities\Elevator.cs" />
-    <Compile Include="Entities\GlobalParametrs.cs" />
+    <Compile Include="Repositories\GlobalParametrs.cs" />
     <Compile Include="Entities\Human.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servises\ElevatorServise.cs" />
+    <Compile Include="Servises\SimulationSystemServise.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

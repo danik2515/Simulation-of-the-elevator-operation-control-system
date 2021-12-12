@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Entities;
-
+using Model.Repositories;
 namespace Model.Servises {
     public class ElevatorServise {
         private double time0;

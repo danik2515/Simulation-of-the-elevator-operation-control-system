@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using Model.Servises;
-
+using Model.Repositories;
 namespace Model.Entities {
     public class Elevator {
         public static List<Elevator> elevator;
@@ -27,6 +27,10 @@ namespace Model.Entities {
             Thread elevatorThread = new Thread(new ThreadStart(Move));
             elevatorThread.Start();
         }
+        public bool Check(ref double distance, int _targetFloor, int _startFloor) {
+            distance = Math.Abs(_startFloor - position);
+            return true;
+        }
 
         public void Move() {
             while (true) {
@@ -34,16 +38,16 @@ namespace Model.Entities {
                 elevatorServise.MoveElevator(targetFloor);
                 }
             }
-            
+        
         
         public static void Create() {
             elevator = new List<Elevator>();
-            for (int num = 0; num <= ConfigData.countOfElevator; num++) {
+            for (int num = 0; num < ConfigData.countOfElevator; num++) {
                 elevator.Add(new Elevator(num));
    
             }
 
-            Elevator.elevator[0].targetFloor = 2;
+            
             
 
 

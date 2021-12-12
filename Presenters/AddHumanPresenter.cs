@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Presenters.IViews;
 using Model;
 using Model.Entities;
-
+using Model.Repositories;
 namespace Presenters {
     public class AddHumanPresenter {
         IAddHumanView _addHumanView;
@@ -19,7 +19,7 @@ namespace Presenters {
                 int _startFloor = Int32.Parse(startFloor);
                 int _endFloor = Int32.Parse(endFloor);
                 if (_cntOfPeople != 0 && _startFloor >= 1 && _startFloor <= ConfigData.countOfFloor && _endFloor >= 1 && _endFloor <= ConfigData.countOfFloor && _endFloor!=_startFloor) {
-                    Human human = new Human(_startFloor, _endFloor);
+                    Human human = new Human(_endFloor, _startFloor);
                 } else {
                     _addHumanView.ShowErrorMessage("Uncorrect data");
                 }

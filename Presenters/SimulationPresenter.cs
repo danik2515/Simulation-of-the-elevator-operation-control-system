@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Presenters.IViews;
 using Model.Entities;
-
+using Model.Repositories;
 
 namespace Presenters {
     public class SimulationPresenter {
@@ -18,7 +18,7 @@ namespace Presenters {
             _simulationView.DrawFloors(ConfigData.countOfFloor,ConfigData.countOfElevator);
         }
         public void TimeSet() {
-            GlobalParametrs.CountTime();
+            SimulationSystem.CountTime();
         }
         public void AddElevator() {
             if (Elevator.elevator != null) {

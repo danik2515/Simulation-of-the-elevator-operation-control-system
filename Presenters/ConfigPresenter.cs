@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Presenters.IViews;
 using Model;
 using Model.Entities;
-
+using Model.Repositories;
 namespace Presenters {
     public class ConfigPresenter {
         IConfigView _configView;
@@ -33,7 +33,7 @@ namespace Presenters {
                     ConfigData.accelerationOfElevator>=1
                     ) {
                     _configView.Confirm();
-                    GlobalParametrs.StartTime();
+                    SimulationSystem.StartTime();
                 } else {
                     _configView.ShowErrorMessage("Uncorrect data");
                 }
