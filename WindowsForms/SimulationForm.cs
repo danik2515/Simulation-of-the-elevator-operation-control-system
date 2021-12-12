@@ -24,8 +24,8 @@ namespace WindowsForms {
             part = new Bitmap(1405, 1020);
             g = Graphics.FromImage(part);
             resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
-            elevator = (System.Drawing.Image)resources.GetObject("closeElevator"); 
-            wall = (System.Drawing.Image)resources.GetObject("wall");
+            elevator = new Bitmap("..\\..\\Resources\\closeElevator.png"); 
+            wall = new Bitmap("..\\..\\Resources\\wall.png");
             presenter = new SimulationPresenter(this);
             
             presenter.AddElevator();
