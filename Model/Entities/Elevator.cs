@@ -80,10 +80,8 @@ namespace Model.Entities {
    
             }
 
-            Elevator.elevator[0].targetFloor = 4;
-            Elevator.elevator[1].targetFloor = 16;
-            Elevator.elevator[2].targetFloor = 20;
-            Elevator.elevator[3].targetFloor = 10;
+            Elevator.elevator[0].targetFloor = 2;
+            
 
 
         }

@@ -13,6 +13,7 @@ using System.Threading;
 namespace WindowsForms {
     public partial class SimulationForm : Form,ISimulationView {
         SimulationPresenter presenter { get; set; }
+        System.ComponentModel.ComponentResourceManager resources;
         Image elevator;
         Image wall;
         
@@ -22,8 +23,9 @@ namespace WindowsForms {
             InitializeComponent();
             part = new Bitmap(1405, 1020);
             g = Graphics.FromImage(part);
-            elevator = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\closeElevator.png");
-            wall = new Bitmap("C:\\Users\\1111\\Desktop\\Project\\WindowsForms\\WindowsForms\\Picture\\wall.png");
+            resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
+            elevator = (System.Drawing.Image)resources.GetObject("closeElevator"); 
+            wall = (System.Drawing.Image)resources.GetObject("wall");
             presenter = new SimulationPresenter(this);
             
             presenter.AddElevator();
