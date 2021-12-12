@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Model.Entities {
     public class Human {
-        public int countOfHuman { get; set; }
+        
         public int targetFloor { get; set;}
         public int startFloor { get; set; }
         public static List<Human> humans;
         public static void Wait() {
 
         }
-        public Human(int _countOfHuman,int _targetFloor,int _startFloor) {
-            countOfHuman = _countOfHuman;
+        public Human(int _targetFloor,int _startFloor) {
+            
             targetFloor = _targetFloor;
             startFloor = _startFloor;
             

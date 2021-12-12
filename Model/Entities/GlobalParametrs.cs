@@ -18,10 +18,8 @@ namespace Model.Entities {
             }
             time += accelaration*0.1;
             
-            for (int num = 0; num < ConfigData.countOfElevator; num++) {
-                Elevator.elevator[num].Move();
-            }
-            Human.Wait();
+            
+            
         }
         public static void StartTime() {
             accelaration = 1.0;

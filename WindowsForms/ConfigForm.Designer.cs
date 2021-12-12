@@ -66,7 +66,7 @@
             this.countOfElevatorTextBox.PromptChar = ' ';
             this.countOfElevatorTextBox.Size = new System.Drawing.Size(24, 20);
             this.countOfElevatorTextBox.TabIndex = 2;
-            this.countOfElevatorTextBox.Text = "1";
+            this.countOfElevatorTextBox.Text = "5";
             // 
             // label2
             // 
@@ -84,7 +84,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(13, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.Size = new System.Drawing.Size(114, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Count of elevators";
             // 
@@ -94,7 +94,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(13, 133);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.Size = new System.Drawing.Size(91, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Count of floors";
             // 
@@ -106,7 +106,7 @@
             this.countOfFloorsTextBox.PromptChar = ' ';
             this.countOfFloorsTextBox.Size = new System.Drawing.Size(24, 20);
             this.countOfFloorsTextBox.TabIndex = 6;
-            this.countOfFloorsTextBox.Text = "3";
+            this.countOfFloorsTextBox.Text = "20";
             // 
             // label5
             // 
@@ -124,7 +124,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(13, 261);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 16);
+            this.label6.Size = new System.Drawing.Size(124, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Max weight (human)";
             // 
@@ -134,7 +134,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(13, 286);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 16);
+            this.label7.Size = new System.Drawing.Size(110, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Max speed value";
             // 
@@ -144,7 +144,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(13, 312);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 16);
+            this.label8.Size = new System.Drawing.Size(118, 16);
             this.label8.TabIndex = 10;
             this.label8.Text = "Acceleration value";
             // 
@@ -184,7 +184,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(13, 167);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 16);
+            this.label9.Size = new System.Drawing.Size(117, 16);
             this.label9.TabIndex = 14;
             this.label9.Text = "Choice of strategy:";
             // 
@@ -263,7 +263,7 @@
             this.infoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.infoLabel1.Location = new System.Drawing.Point(236, 270);
             this.infoLabel1.Name = "infoLabel1";
-            this.infoLabel1.Size = new System.Drawing.Size(301, 16);
+            this.infoLabel1.Size = new System.Drawing.Size(300, 16);
             this.infoLabel1.TabIndex = 22;
             this.infoLabel1.Text = "/human <start floor> <end floor> <count of people>";
             // 
@@ -273,7 +273,7 @@
             this.infoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.infoLabel2.Location = new System.Drawing.Point(236, 286);
             this.infoLabel2.Name = "infoLabel2";
-            this.infoLabel2.Size = new System.Drawing.Size(199, 16);
+            this.infoLabel2.Size = new System.Drawing.Size(198, 16);
             this.infoLabel2.TabIndex = 23;
             this.infoLabel2.Text = "/firealarm <start time> <duration>";
             // 

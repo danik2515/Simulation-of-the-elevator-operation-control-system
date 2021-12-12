@@ -1,7 +1,6 @@
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe.config
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.exe
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\WindowsForms.pdb
-C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csprojResolveAssemblyReference.cache
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.Cache
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.exe
@@ -17,3 +16,7 @@ C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\Presenters.dll
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\Presenters.pdb
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\Model.dll
 C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\bin\Debug\Model.pdb
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.AssemblyReference.cache
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\1111\Desktop\Project\WindowsForms\WindowsForms\obj\Debug\WindowsForms.csproj.CopyComplete

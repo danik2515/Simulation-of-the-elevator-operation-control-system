@@ -10,7 +10,7 @@ using Model.Entities;
 namespace Presenters {
     public class ConfigPresenter {
         IConfigView _configView;
-        ConfigService configService;
+        
         public ConfigPresenter(IConfigView configView) {
             _configView = configView;
         }
