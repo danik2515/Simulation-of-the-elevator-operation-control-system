@@ -21,7 +21,15 @@ namespace WindowsForms {
         Image fire;
         Graphics g;
         int currentFireFrame=0;
+        private const int CS_NOCLOSE = 0x200;
+        protected override CreateParams CreateParams {
+            get {
+                CreateParams mdiCp = base.CreateParams;
+                mdiCp.ClassStyle = mdiCp.ClassStyle | CS_NOCLOSE;
 
+                return mdiCp;
+            }
+        }
 
 
         public SimulationForm() {
@@ -36,6 +44,7 @@ namespace WindowsForms {
             presenter = new SimulationPresenter(this);
             
             presenter.AddElevator();
+            
         }
 
         private void exitLabel_Click(object sender, EventArgs e) {
