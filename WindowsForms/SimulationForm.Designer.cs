@@ -142,7 +142,7 @@
             // 
             this.pictureBoxFloor.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxFloor.InitialImage = null;
-            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 0);
+            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 13);
             this.pictureBoxFloor.Name = "pictureBoxFloor";
             this.pictureBoxFloor.Size = new System.Drawing.Size(1434, 1016);
             this.pictureBoxFloor.TabIndex = 6;
@@ -167,9 +167,9 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.pictureBoxFloor);
-            this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

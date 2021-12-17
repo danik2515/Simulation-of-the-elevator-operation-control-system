@@ -19,6 +19,8 @@ namespace Model.Entities {
         public static List<Human> humans = new List<Human>();
         public int currFrame { get; set; }
         public bool pressedButton { get; set; }
+        public double timeStartWait { get; set; }
+        public double timeWait { get; set; }
         public void Wait() {
             while (true) {
                 Thread.Sleep(100);
@@ -28,6 +30,7 @@ namespace Model.Entities {
                     pressedButton = true;
                     if (!GlobalParametrs.fireAlarm) {
                         PressButton();
+                        timeStartWait = GlobalParametrs.time;
                     }
                 }
                 if (GlobalParametrs.time - timeStart < waitTime && state == 1) {
@@ -38,7 +41,12 @@ namespace Model.Entities {
                     PressButton();
                     Thread.Sleep(1000);
                 }
-                if(state == 0 && GlobalParametrs.fireAlarm) {
+                if (state == 0 && !GlobalParametrs.fireAlarm) {
+                    timeWait = GlobalParametrs.time - timeStartWait;
+
+
+                }
+                if (state == 0 && GlobalParametrs.fireAlarm) {
                     targetFloor = startFloor;
                     targetElevator = 0;
                     state = 5;
@@ -75,6 +83,7 @@ namespace Model.Entities {
             targetFloor = _targetFloor;
             startFloor = _startFloor;
             pressedButton = false;
+            timeWait = 0.0;
             timeStart = GlobalParametrs.time;
             humans.Add(this);
             Thread humanThread = new Thread(new ThreadStart(Wait));
