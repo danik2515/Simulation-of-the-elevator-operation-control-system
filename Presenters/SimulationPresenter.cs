@@ -32,6 +32,10 @@ namespace Presenters {
                     _simulationView.DrawHuman(Human.humans[num].startFloor, Human.humans[num].position, Human.humans[num].state, Human.humans[num].currFrame, Human.humans[num].targetFloor);
                 }
         }
+
+        public void AddFire() {
+            _simulationView.DrawFire(GlobalParametrs.fireAlarm,GlobalParametrs.pause,ConfigData.countOfFloor,ConfigData.countOfElevator);
+        } 
         public void Pause() {
             if (GlobalParametrs.pause) {
                 GlobalParametrs.pause = false;
@@ -47,6 +51,9 @@ namespace Presenters {
             else {
                 GlobalParametrs.fireAlarm = true;
             }
+        }
+        public double GetTime() {
+            return GlobalParametrs.time;
         }
     }
 }

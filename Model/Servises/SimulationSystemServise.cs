@@ -11,7 +11,7 @@ namespace Model.Servises {
             int callingElevator=-1;
             double minDistance = 20.0;
             double distance=0.0;
-            if (ConfigData.stategy) {
+            if (ConfigData.strategy) {
                 for (int i = 0; i < ConfigData.countOfElevator; i++) {
                     if (Elevator.elevator[i].stateElevator == 1 && Elevator.elevator[i].targetFloor == _startFloor) {
                         callingElevator = i;
@@ -40,11 +40,13 @@ namespace Model.Servises {
                 }
             }
             if(callingElevator != -1) {
-                if (_targetFloor - _startFloor < 0) {
-                    Elevator.elevator[callingElevator].direction = true;
-                }
-                else {
-                    Elevator.elevator[callingElevator].direction = false;
+                if (!ConfigData.strategy) {
+                    if (_targetFloor - _startFloor < 0) {
+                        Elevator.elevator[callingElevator].direction = true;
+                    }
+                    else {
+                        Elevator.elevator[callingElevator].direction = false;
+                    }
                 }
                 Elevator.elevator[callingElevator].targetFloor = _startFloor;
                 Elevator.elevator[callingElevator].stateElevator = 1;

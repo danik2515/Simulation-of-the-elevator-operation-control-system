@@ -18,9 +18,11 @@ namespace WindowsForms {
         Image wall;
         Image human;
         Image part;
+        Image fire;
         Graphics g;
-        
-       
+        int currentFireFrame=0;
+
+
 
         public SimulationForm() {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace WindowsForms {
             elevator = new Bitmap("..\\..\\Resources\\closeElevator.png"); 
             wall = new Bitmap("..\\..\\Resources\\wall.png");
             human = new Bitmap("..\\..\\Resources\\human.png");
+            fire = new Bitmap("..\\..\\Resources\\fire.png");
             presenter = new SimulationPresenter(this);
             
             presenter.AddElevator();
@@ -111,11 +114,31 @@ namespace WindowsForms {
            
         }
 
+        public void DrawFire(bool state,bool pause,int floor,int elevator) {
+            int sizeX = 50;
+            int sizeY = 100;
+            if (state) {
+                Random rnd = new Random();
+                int enentropy = 0;
+                if (!pause) {
+                    enentropy = rnd.Next(-10, 30); 
+                    currentFireFrame++; }
+                g.DrawImage(fire, (elevator-1)*200+50, 965 - 50*(floor-1), new Rectangle(new Point((sizeX+enentropy)*currentFireFrame, 0), new Size(sizeX+enentropy, sizeY)), GraphicsUnit.Pixel);
+                
+                if (currentFireFrame > 3) {
+                    currentFireFrame = 0;
+                }
+            }
+            pictureBoxFloor.Image = part;
+        }
+
         private void timer_Tick(object sender, EventArgs e) {
             presenter.TimeSet();
             presenter.AddFloors();
             presenter.AddElevator();
             presenter.AddHuman();
+            presenter.AddFire();
+            statusBar.Text =Math.Round(presenter.GetTime(),2).ToString()+" s ";
         }
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e) {

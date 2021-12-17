@@ -22,7 +22,7 @@ namespace Presenters {
                 try {
                     ConfigData.countOfElevator = Int32.Parse(cntOfElevator.Replace(" ", ""));
                     ConfigData.countOfFloor = Int32.Parse(cntOfFloors.Replace(" ", ""));
-                    ConfigData.stategy = stategy;
+                    ConfigData.strategy = stategy;
                     ConfigData.maxWeightOfElevator = Int32.Parse(maxWeight.Replace(" ", ""));
                     ConfigData.speedOfElevator = Int32.Parse(speed.Replace(" ", ""));
                     ConfigData.accelerationOfElevator = Int32.Parse(acceleration.Replace(" ", ""));
@@ -32,6 +32,9 @@ namespace Presenters {
                 }
                 if (!rule.Equals("")) {
                     ConfigData.rule = rule.Split(' ');
+                }
+                else {
+                    ConfigData.rule = new string[] {};
                 }
                 if (ConfigData.countOfElevator >= 1 && ConfigData.countOfElevator <= 5 &&
                     ConfigData.countOfFloor >= 2 && ConfigData.countOfFloor <= 20 &&

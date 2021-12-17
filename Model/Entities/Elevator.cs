@@ -56,7 +56,9 @@ namespace Model.Entities {
                 }
                 elevatorServise.MoveElevator(targetFloor);
 
-                
+                if (stateElevator == 0&&GlobalParametrs.fireAlarm) {
+                    targetFloor = 1;
+                }
                 
 
                 if(stateElevator == 1 && !isMove) {

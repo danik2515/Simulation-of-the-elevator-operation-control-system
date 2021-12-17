@@ -38,6 +38,7 @@
             this.ShutdownButton = new System.Windows.Forms.Button();
             this.pictureBoxFloor = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.statusBar = new System.Windows.Forms.StatusBar();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).BeginInit();
             this.SuspendLayout();
@@ -141,9 +142,9 @@
             // 
             this.pictureBoxFloor.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxFloor.InitialImage = null;
-            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 27);
+            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 0);
             this.pictureBoxFloor.Name = "pictureBoxFloor";
-            this.pictureBoxFloor.Size = new System.Drawing.Size(1405, 1020);
+            this.pictureBoxFloor.Size = new System.Drawing.Size(1434, 1016);
             this.pictureBoxFloor.TabIndex = 6;
             this.pictureBoxFloor.TabStop = false;
             // 
@@ -152,6 +153,13 @@
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // statusBar
+            // 
+            this.statusBar.Location = new System.Drawing.Point(0, 1022);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(1904, 19);
+            this.statusBar.TabIndex = 7;
+            // 
             // SimulationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +167,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.statusBar);
             this.Controls.Add(this.pictureBoxFloor);
             this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.label1);
@@ -191,5 +200,6 @@
         private System.Windows.Forms.Button ShutdownButton;
         private System.Windows.Forms.PictureBox pictureBoxFloor;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.StatusBar statusBar;
     }
 }
