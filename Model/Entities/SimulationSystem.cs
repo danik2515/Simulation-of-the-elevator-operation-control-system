@@ -7,7 +7,9 @@ using Model.Repositories;
 using Model.Servises;
 namespace Model.Entities {
     public static class SimulationSystem {
-
+        public static int fireAlarmsNum = 0;
+        public static double startTimeFireAlarm = 0;
+        public static double fireAlarmsDuration =0;
         public static void CountTime() {
 
             if (!GlobalParametrs.pause) {
@@ -15,6 +17,8 @@ namespace Model.Entities {
                 CheckFireAlarmRule(ConfigData.StartFireAlarmTime, true);
                 GlobalParametrs.time += GlobalParametrs.accelaration * 0.1;
             }
+
+            
         }
         public static void StartTime() {
             GlobalParametrs.accelaration = 1.0;
@@ -27,7 +31,14 @@ namespace Model.Entities {
             if(alarmTime.Count!=0)
             if (GlobalParametrs.time >= alarmTime[0]&& GlobalParametrs.accelaration * 0.1+GlobalParametrs.time>= alarmTime[0]) {
                 GlobalParametrs.fireAlarm = state;
-                    alarmTime.RemoveAt(0);
+                alarmTime.RemoveAt(0);
+                    if (state && !GlobalParametrs.fireAlarm) {
+                        SimulationSystem.fireAlarmsNum++;
+                        SimulationSystem.startTimeFireAlarm = GlobalParametrs.time;
+                    }
+                    if(!state&& GlobalParametrs.fireAlarm) {
+                        fireAlarmsDuration += GlobalParametrs.time - SimulationSystem.startTimeFireAlarm;
+                    }
             }
         }
     }

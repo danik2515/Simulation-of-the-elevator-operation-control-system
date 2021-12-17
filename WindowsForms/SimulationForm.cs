@@ -77,17 +77,23 @@ namespace WindowsForms {
             HumanStatusForm humanStatusForm = new HumanStatusForm();
             humanStatusForm.Show();
         }
-
-        private void ShutdownButton_Click(object sender, EventArgs e) {
+        public void Shutdown() {
             this.Hide();
             InformationForm informationForm = new InformationForm();
             informationForm.Show();
+        }
+        private void ShutdownButton_Click(object sender, EventArgs e) {
+            presenter.ShutdownCheck();
+            
         }
 
         private void SimulationForm_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
         }
 
+        public void ShowErrorMessage(string message) {
+            MessageBox.Show(message);
+        }
         public void DrawFloors(int countOfFloor,int countOfElevator) {
             int sizeX = 200;
             int sizeY = 50;
@@ -169,5 +175,6 @@ namespace WindowsForms {
         private void fireAlarmToolStripMenuItem_Click(object sender, EventArgs e) {
             presenter.FireAlarm();
         }
+      
     }
 }

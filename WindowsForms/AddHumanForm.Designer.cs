@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddHumanForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 88);
+            this.label3.Location = new System.Drawing.Point(64, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -87,7 +88,7 @@
             this.startFloorTextBox.PromptChar = ' ';
             this.startFloorTextBox.Size = new System.Drawing.Size(24, 20);
             this.startFloorTextBox.TabIndex = 5;
-            this.startFloorTextBox.Text = "5";
+            this.startFloorTextBox.Text = "15";
             // 
             // endFloorTextBox
             // 
@@ -97,12 +98,13 @@
             this.endFloorTextBox.PromptChar = ' ';
             this.endFloorTextBox.Size = new System.Drawing.Size(24, 20);
             this.endFloorTextBox.TabIndex = 6;
-            this.endFloorTextBox.Text = "1";
+            this.endFloorTextBox.Text = "3";
             // 
             // AddHumanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(238, 192);
             this.Controls.Add(this.endFloorTextBox);
             this.Controls.Add(this.startFloorTextBox);

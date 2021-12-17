@@ -47,13 +47,25 @@ namespace Presenters {
         public void FireAlarm() {
             if (GlobalParametrs.fireAlarm) {
                 GlobalParametrs.fireAlarm = false;
+                SimulationSystem.fireAlarmsDuration += GlobalParametrs.time - SimulationSystem.startTimeFireAlarm;
             }
             else {
+                SimulationSystem.fireAlarmsNum++;
                 GlobalParametrs.fireAlarm = true;
+                SimulationSystem.startTimeFireAlarm = GlobalParametrs.time;
             }
         }
         public double GetTime() {
             return GlobalParametrs.time;
+        }
+        public void ShutdownCheck() {
+            for(int i = 0; i<ConfigData.countOfElevator; i++) {
+                if(Elevator.elevator[i].human.Count!=0|| Elevator.elevator[i].isMove) {
+                    _simulationView.ShowErrorMessage("Elevator is move!!!");
+                    return;
+                }
+            }
+            _simulationView.Shutdown();
         }
     }
 }

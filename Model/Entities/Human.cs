@@ -21,6 +21,8 @@ namespace Model.Entities {
         public bool pressedButton { get; set; }
         public double timeStartWait { get; set; }
         public double timeWait { get; set; }
+
+        public static int transprotedPeopleNum = 0;
         public void Wait() {
             while (true) {
                 Thread.Sleep(100);
@@ -65,6 +67,7 @@ namespace Model.Entities {
                     targetFloor = 1;
                 }
                 if (state == 5) {
+                    transprotedPeopleNum++;
                     timeStartRun = GlobalParametrs.time;
                     state = 6;
                 }
@@ -99,7 +102,22 @@ namespace Model.Entities {
             }
             return false;
         }
-        
+        public static double SumWaitingTime() {
+            double sum =0;
+            for (int i = 0; i < Human.humans.Count; i++) {
+                sum+=Human.humans[i].timeWait;
+            }
+            return sum;
+        }
+        public static double LongestWaitingTime() {
+            double longest = 0;
+            for (int i = 0; i < Human.humans.Count; i++) {
+                if (Human.humans[i].timeWait > longest) {
+                    longest = Human.humans[0].timeWait;
+                }
+            }
+            return longest;
+        }
 
     }
 }

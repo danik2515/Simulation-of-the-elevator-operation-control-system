@@ -21,7 +21,7 @@ namespace Model.Entities {
         public bool direction { get; set; }
         public bool fireAlarmSettings { get; set; }
         public ElevatorServise elevatorServise { get; set; }
-        
+        public static int totalTrips = 0;
         public Elevator(int num) {
             numberElevator = num;
             stateElevator=0;
@@ -53,6 +53,7 @@ namespace Model.Entities {
                     targetList.Clear();
                     stateElevator = 4;
                     fireAlarmSettings = false;
+                    totalTrips++;
                 }
                 elevatorServise.MoveElevator(targetFloor);
 
@@ -84,6 +85,7 @@ namespace Model.Entities {
                     targetFloor = targetList[0];
                     targetList.RemoveAt(0);
                     stateElevator = 4;
+                    totalTrips++;
                     }
                
                 }

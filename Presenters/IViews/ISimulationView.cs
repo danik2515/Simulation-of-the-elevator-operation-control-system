@@ -12,5 +12,7 @@ namespace Presenters.IViews {
 
         void DrawHuman(int floor, double humanPosition, int humanState,int currFrame,int targetFloor);
         void DrawFire(bool state,bool pause,int floor,int elevator);
+        void Shutdown();
+        void ShowErrorMessage(string message);
     }
 }
