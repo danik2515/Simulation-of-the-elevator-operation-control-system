@@ -21,5 +21,6 @@ namespace WindowsForms {
             ConfigForm configForm = new ConfigForm();
             configForm.Show();
         }
+
     }
 }
