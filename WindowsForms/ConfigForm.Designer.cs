@@ -177,7 +177,7 @@
             this.speedValueTextBox.PromptChar = ' ';
             this.speedValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.speedValueTextBox.TabIndex = 12;
-            this.speedValueTextBox.Text = "3";
+            this.speedValueTextBox.Text = "6";
             this.speedValueTextBox.Enter += new System.EventHandler(this.speedValueTextBox_Enter);
             this.speedValueTextBox.Leave += new System.EventHandler(this.speedValueTextBox_Leave);
             // 
@@ -190,7 +190,7 @@
             this.accelerationValueTextBox.PromptChar = ' ';
             this.accelerationValueTextBox.Size = new System.Drawing.Size(24, 20);
             this.accelerationValueTextBox.TabIndex = 13;
-            this.accelerationValueTextBox.Text = "50";
+            this.accelerationValueTextBox.Text = "80";
             this.accelerationValueTextBox.Enter += new System.EventHandler(this.accelerationValueTextBox_Enter);
             this.accelerationValueTextBox.Leave += new System.EventHandler(this.accelerationValueTextBox_Leave);
             // 

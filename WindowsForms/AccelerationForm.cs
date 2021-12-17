@@ -15,7 +15,8 @@ namespace WindowsForms {
         AccelerationPresenter presenter;
         public AccelerationForm() {
             InitializeComponent();
-            presenter = new AccelerationPresenter(this);      
+            presenter = new AccelerationPresenter(this);
+            this.MinimizeBox = false;
         }
 
         public void Confirm() {

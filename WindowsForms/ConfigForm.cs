@@ -17,6 +17,7 @@ namespace WindowsForms {
         public ConfigForm() {
             InitializeComponent();
             presenter = new ConfigPresenter(this);
+            this.MaximizeBox = false;
         }
 
         private void exitLabel_Click(object sender, EventArgs e) {
@@ -96,55 +97,55 @@ namespace WindowsForms {
         }
 
         private void countOfElevatorTextBox_Enter(object sender, EventArgs e) {
-            if (countOfElevatorTextBox.Text == "   !   ")
+            if (countOfElevatorTextBox.Text == "!!!   ")
                 countOfElevatorTextBox.Text = "";
         }
 
         private void countOfElevatorTextBox_Leave(object sender, EventArgs e) {
             if (countOfElevatorTextBox.Text == "") {
-                countOfElevatorTextBox.Text = "   !   ";
+                countOfElevatorTextBox.Text = "!!!   ";
             }
                 
         }
 
         private void countOfFloorsTextBox_Enter(object sender, EventArgs e) {
-            if (countOfFloorsTextBox.Text == "   !   ")
+            if (countOfFloorsTextBox.Text == "!!!   ")
                 countOfFloorsTextBox.Text = "";
         }
 
         private void countOfFloorsTextBox_Leave(object sender, EventArgs e) {
             if (countOfFloorsTextBox.Text == "")
-                countOfFloorsTextBox.Text = "   !   ";
+                countOfFloorsTextBox.Text = "!!!   ";
         }
 
         private void maxWeightTextBox_Enter(object sender, EventArgs e) {
-            if (maxWeightTextBox.Text == "   !   ")
+            if (maxWeightTextBox.Text == "!!!   ")
                 maxWeightTextBox.Text = "";
         }
 
         private void maxWeightTextBox_Leave(object sender, EventArgs e) {
             if (maxWeightTextBox.Text == "")
-                maxWeightTextBox.Text = "   !   ";
+                maxWeightTextBox.Text = "!!!   ";
         }
 
         private void speedValueTextBox_Enter(object sender, EventArgs e) {
-            if (speedValueTextBox.Text == "   !   ")
+            if (speedValueTextBox.Text == "!!!   ")
                 speedValueTextBox.Text = "";
         }
 
         private void speedValueTextBox_Leave(object sender, EventArgs e) {
             if (speedValueTextBox.Text == "")
-                speedValueTextBox.Text = "   !   ";
+                speedValueTextBox.Text = "!!!   ";
         }
 
         private void accelerationValueTextBox_Enter(object sender, EventArgs e) {
-            if (accelerationValueTextBox.Text == "   !   ")
+            if (accelerationValueTextBox.Text == "!!!   ")
                 accelerationValueTextBox.Text = "";
         }
 
         private void accelerationValueTextBox_Leave(object sender, EventArgs e) {
             if (accelerationValueTextBox.Text == "")
-                accelerationValueTextBox.Text = "   !   ";
+                accelerationValueTextBox.Text = "!!!   ";
         }
 
     }

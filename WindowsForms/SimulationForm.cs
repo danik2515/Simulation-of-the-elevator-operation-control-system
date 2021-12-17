@@ -23,6 +23,7 @@ namespace WindowsForms {
         Image background;
         Graphics g;
         int currentFireFrame=0;
+        
         private const int CS_NOCLOSE = 0x200;
         protected override CreateParams CreateParams {
             get {
@@ -36,6 +37,7 @@ namespace WindowsForms {
 
         public SimulationForm() {
             InitializeComponent();
+            this.MaximizeBox = false;
             part = new Bitmap(1420, 1020);
             g = Graphics.FromImage(part);
             resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));

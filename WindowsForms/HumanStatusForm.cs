@@ -12,6 +12,8 @@ namespace WindowsForms {
     public partial class HumanStatusForm : Form {
         public HumanStatusForm() {
             InitializeComponent();
+            
+            this.MaximizeBox = false;
         }
     }
 }

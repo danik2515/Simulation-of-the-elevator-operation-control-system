@@ -16,6 +16,7 @@ namespace WindowsForms {
         public AddHumanForm() { 
             InitializeComponent();
             presenter = new AddHumanPresenter(this);
+            this.MinimizeBox = false;
         }
         public void ShowErrorMessage(string message) {
             MessageBox.Show(message);
