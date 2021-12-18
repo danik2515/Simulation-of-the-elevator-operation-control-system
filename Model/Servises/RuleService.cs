@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Entities;
 using Model.Repositories;
-using Model.Entities;
+using System;
+using System.Collections.Generic;
 
 namespace Model.Servises {
     public static class RuleService {
@@ -12,7 +9,7 @@ namespace Model.Servises {
             ConfigData.EndFireAlarmTime = new List<double> { };
             ConfigData.StartFireAlarmTime = new List<double> { };
             string[] rule = ConfigData.rule;
-            if (rule.Length>0) {
+            if (rule.Length > 0) {
                 for (int i = 0; i < rule.Length; i++) {
                     if (rule[i].Equals("/human")) {
                         try {
@@ -28,13 +25,13 @@ namespace Model.Servises {
                         catch {
 
                         }
-                       
+
                     }
                     if (rule[i].Equals("/fireAlarm")) {
                         try {
                             double _startTime = Double.Parse(rule[i + 1]);
                             double _endTime = Double.Parse(rule[i + 2]);
-                            if (_startTime >=0 && _endTime > _startTime) {
+                            if (_startTime >= 0 && _endTime > _startTime) {
                                 ConfigData.StartFireAlarmTime.Add(_startTime);
                                 ConfigData.EndFireAlarmTime.Add(_endTime);
                             }
@@ -42,7 +39,7 @@ namespace Model.Servises {
                         catch {
 
                         }
-                       
+
                     }
                 }
             }

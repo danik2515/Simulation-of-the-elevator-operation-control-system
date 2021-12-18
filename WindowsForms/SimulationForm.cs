@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Presenters;
 using Presenters.IViews;
-using Presenters;
-using System.Threading;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 namespace WindowsForms {
     public partial class SimulationForm : Form, ISimulationView {
         SimulationPresenter presenter { get; set; }
@@ -22,8 +15,8 @@ namespace WindowsForms {
         Image alarmBackground;
         Image background;
         Graphics g;
-        int currentFireFrame=0;
-        
+        int currentFireFrame = 0;
+
         private const int CS_NOCLOSE = 0x200;
         protected override CreateParams CreateParams {
             get {
@@ -41,16 +34,16 @@ namespace WindowsForms {
             part = new Bitmap(1420, 1020);
             g = Graphics.FromImage(part);
             resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
-            elevator = new Bitmap("..\\..\\Resources\\closeElevator.png"); 
+            elevator = new Bitmap("..\\..\\Resources\\closeElevator.png");
             wall = new Bitmap("..\\..\\Resources\\wall.png");
             human = new Bitmap("..\\..\\Resources\\human.png");
             fire = new Bitmap("..\\..\\Resources\\fire.png");
             alarmBackground = new Bitmap("..\\..\\Resources\\alarmBackground.png");
             background = new Bitmap("..\\..\\Resources\\background.png");
             presenter = new SimulationPresenter(this);
-            
+
             presenter.AddElevator();
-            
+
         }
 
         private void exitLabel_Click(object sender, EventArgs e) {
@@ -84,7 +77,7 @@ namespace WindowsForms {
         }
         private void ShutdownButton_Click(object sender, EventArgs e) {
             presenter.ShutdownCheck();
-            
+
         }
 
         private void SimulationForm_FormClosed(object sender, FormClosedEventArgs e) {
@@ -94,7 +87,7 @@ namespace WindowsForms {
         public void ShowErrorMessage(string message) {
             MessageBox.Show(message);
         }
-        public void DrawFloors(int countOfFloor,int countOfElevator) {
+        public void DrawFloors(int countOfFloor, int countOfElevator) {
             int sizeX = 200;
             int sizeY = 50;
 
@@ -105,37 +98,37 @@ namespace WindowsForms {
                 }
             }
         }
-        public void DrawElevator(int numberElevator,double position) {
+        public void DrawElevator(int numberElevator, double position) {
             int sizeX = 36;
             int sizeY = 50;
-            g.DrawImage(elevator, 200-sizeX+numberElevator*(200),1015-sizeY*(float)position, new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
-            
+            g.DrawImage(elevator, 200 - sizeX + numberElevator * (200), 1015 - sizeY * (float)position, new Rectangle(new Point(0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+
             pictureBoxFloor.Image = part;
 
         }
-        
-        public void DrawHuman(int startFloor, double humanPosition, int humanState, int currFrame,int targetFloor) {
+
+        public void DrawHuman(int startFloor, double humanPosition, int humanState, int currFrame, int targetFloor) {
             int sizeX = 20;
             int sizeY = 45;
             if (humanState == 1) {
-                g.DrawImage(human, (float)humanPosition * 140, 980 - (sizeY + 5) * startFloor+27, new Rectangle(new Point(sizeX * currFrame, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+                g.DrawImage(human, (float)humanPosition * 140, 980 - (sizeY + 5) * startFloor + 27, new Rectangle(new Point(sizeX * currFrame, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
             }
             if (humanState == 0 || humanState == 2) {
-                g.DrawImage(human, (float)humanPosition * 140, 980 - (sizeY + 5) * startFloor+27, new Rectangle(new Point(sizeX * 0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+                g.DrawImage(human, (float)humanPosition * 140, 980 - (sizeY + 5) * startFloor + 27, new Rectangle(new Point(sizeX * 0, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
             }
-            if(humanState == 3) {
-                g.DrawImage(human, (float)humanPosition * 200+140, 980 - (sizeY + 5) * startFloor + 27, new Rectangle(new Point(sizeX * currFrame, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+            if (humanState == 3) {
+                g.DrawImage(human, (float)humanPosition * 200 + 140, 980 - (sizeY + 5) * startFloor + 27, new Rectangle(new Point(sizeX * currFrame, 0), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
             }
             if (humanState == 6) {
-                g.DrawImage(human, (float)humanPosition * 200-25, 980 - (sizeY + 5) * targetFloor + 27, new Rectangle(new Point(sizeX * currFrame, 45), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
+                g.DrawImage(human, (float)humanPosition * 200 - 25, 980 - (sizeY + 5) * targetFloor + 27, new Rectangle(new Point(sizeX * currFrame, 45), new Size(sizeX, sizeY)), GraphicsUnit.Pixel);
             }
             pictureBoxFloor.Image = part;
-            
-            
-           
+
+
+
         }
 
-        public void DrawFire(bool state,bool pause,int floor,int elevator) {
+        public void DrawFire(bool state, bool pause, int floor, int elevator) {
             int sizeX = 50;
             int sizeY = 100;
             if (state) {
@@ -143,10 +136,11 @@ namespace WindowsForms {
                 Random rnd = new Random();
                 int enentropy = 0;
                 if (!pause) {
-                    enentropy = rnd.Next(-10, 30); 
-                    currentFireFrame++; }
-                g.DrawImage(fire, (elevator-1)*200+50, 965 - 50*(floor-1), new Rectangle(new Point((sizeX+enentropy)*currentFireFrame, 0), new Size(sizeX+enentropy, sizeY)), GraphicsUnit.Pixel);
-                
+                    enentropy = rnd.Next(-10, 30);
+                    currentFireFrame++;
+                }
+                g.DrawImage(fire, (elevator - 1) * 200 + 50, 965 - 50 * (floor - 1), new Rectangle(new Point((sizeX + enentropy) * currentFireFrame, 0), new Size(sizeX + enentropy, sizeY)), GraphicsUnit.Pixel);
+
                 if (currentFireFrame > 3) {
                     currentFireFrame = 0;
                 }
@@ -165,7 +159,7 @@ namespace WindowsForms {
             presenter.AddElevator();
             presenter.AddHuman();
             presenter.AddFire();
-            statusBar.Text =Math.Round(presenter.GetTime(),2).ToString()+" s ";
+            statusBar.Text = Math.Round(presenter.GetTime(), 2).ToString() + " s ";
         }
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -175,6 +169,6 @@ namespace WindowsForms {
         private void fireAlarmToolStripMenuItem_Click(object sender, EventArgs e) {
             presenter.FireAlarm();
         }
-      
+
     }
 }

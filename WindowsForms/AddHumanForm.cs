@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Presenters;
 using Presenters.IViews;
-using Presenters;
+using System;
+using System.Windows.Forms;
 
 namespace WindowsForms {
     public partial class AddHumanForm : Form, IAddHumanView {
         AddHumanPresenter presenter;
-        public AddHumanForm() { 
+        public AddHumanForm() {
             InitializeComponent();
             presenter = new AddHumanPresenter(this);
             this.MinimizeBox = false;
@@ -24,6 +17,6 @@ namespace WindowsForms {
 
         private void addButton_Click(object sender, EventArgs e) {
             presenter.CheckCorrect(countOfPeopleTextBox.Text, startFloorTextBox.Text, endFloorTextBox.Text);
-                }
+        }
     }
 }

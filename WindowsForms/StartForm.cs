@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Presenters;
 using Presenters.IViews;
-using Presenters;
+using System;
+using System.Windows.Forms;
 namespace WindowsForms {
-    public partial class StartForm :Form, IStartView {
+    public partial class StartForm : Form, IStartView {
         StartPresenter presenter { get; set; }
         public StartForm() {
             InitializeComponent();
@@ -18,7 +11,7 @@ namespace WindowsForms {
             presenter = new StartPresenter(this);
         }
 
-     
+
 
         private void StartButton_Click(object sender, EventArgs e) {
             presenter.Start();

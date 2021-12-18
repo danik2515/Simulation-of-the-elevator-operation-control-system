@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Presenters.IViews;
+﻿using Presenters.IViews;
 namespace Presenters {
     public class StartPresenter {
         IStartView _startView;

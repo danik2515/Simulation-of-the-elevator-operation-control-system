@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using Model.Repositories;
+﻿using Model.Repositories;
 using Model.Servises;
+using System.Collections.Generic;
+using System.Threading;
 namespace Model.Entities {
     public class Human {
         public static double waitTime = 3.0;
         public static double runTime = 2.0;
-        public int targetFloor { get; set;}
+        public int targetFloor { get; set; }
         public int startFloor { get; set; }
         public double timeStart { get; set; }
         public double timeStartRun { get; set; }
@@ -26,7 +23,7 @@ namespace Model.Entities {
         public void Wait() {
             while (true) {
                 Thread.Sleep(100);
-                currFrame = (int)((GlobalParametrs.time - timeStart) * 10)%9 + 3;
+                currFrame = (int)((GlobalParametrs.time - timeStart) * 10) % 9 + 3;
                 if (GlobalParametrs.time - timeStart > waitTime && !pressedButton) {
                     state = 0;
                     pressedButton = true;
@@ -38,7 +35,7 @@ namespace Model.Entities {
                 if (GlobalParametrs.time - timeStart < waitTime && state == 1) {
                     position = (GlobalParametrs.time - timeStart) / waitTime;
                 }
-                
+
                 if (state == 0 && !GlobalParametrs.fireAlarm) {
                     PressButton();
                     Thread.Sleep(1000);
@@ -58,9 +55,9 @@ namespace Model.Entities {
                     timeStartRun = GlobalParametrs.time;
                 }
                 if (state == 3) {
-                    position = targetElevator*(GlobalParametrs.time - timeStartRun) / runTime;
-                    if(GlobalParametrs.time - timeStartRun > runTime) {
-                        state =  4;
+                    position = targetElevator * (GlobalParametrs.time - timeStartRun) / runTime;
+                    if (GlobalParametrs.time - timeStartRun > runTime) {
+                        state = 4;
                     }
                 }
                 if (state == 4 && GlobalParametrs.fireAlarm) {
@@ -72,14 +69,14 @@ namespace Model.Entities {
                     state = 6;
                 }
                 if (state == 6) {
-                    position = (targetElevator+1) * (runTime-(GlobalParametrs.time - timeStartRun)) / runTime;
+                    position = (targetElevator + 1) * (runTime - (GlobalParametrs.time - timeStartRun)) / runTime;
                     if (GlobalParametrs.time - timeStartRun > runTime) {
                         state = 7;
                     }
                 }
             }
         }
-        public Human(int _targetFloor,int _startFloor) {
+        public Human(int _targetFloor, int _startFloor) {
             currFrame = 2;
             state = 1;
             position = 0;
@@ -96,16 +93,16 @@ namespace Model.Entities {
             targetElevator = SimulationSystemServise.CallingElevator(targetFloor, startFloor);
         }
         public bool ExitElevator(int floor) {
-            if(floor == targetFloor) {
+            if (floor == targetFloor) {
                 state = 5;
                 return true;
             }
             return false;
         }
         public static double SumWaitingTime() {
-            double sum =0;
+            double sum = 0;
             for (int i = 0; i < Human.humans.Count; i++) {
-                sum+=Human.humans[i].timeWait;
+                sum += Human.humans[i].timeWait;
             }
             return sum;
         }
@@ -113,7 +110,7 @@ namespace Model.Entities {
             double longest = 0;
             for (int i = 0; i < Human.humans.Count; i++) {
                 if (Human.humans[i].timeWait > longest) {
-                    longest = Human.humans[0].timeWait;
+                    longest = Human.humans[i].timeWait;
                 }
             }
             return longest;

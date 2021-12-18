@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Presenters.IViews {
+﻿namespace Presenters.IViews {
     public interface IInformationView {
 
         void ShowStatus(int totalTrips, int transprotedPeopleNum, double averageWaitingTime,

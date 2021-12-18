@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using Model.Repositories;
 using Model.Servises;
-using Model.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading;
 namespace Model.Entities {
     public class Elevator {
         public static List<Elevator> elevator;
@@ -24,13 +22,13 @@ namespace Model.Entities {
         public static int totalTrips = 0;
         public Elevator(int num) {
             numberElevator = num;
-            stateElevator=0;
+            stateElevator = 0;
             direction = false;
             position = 1;
             targetFloor = 1;
             isMove = false;
             fireAlarmSettings = true;
-            human = new List<Human> ();
+            human = new List<Human>();
             targetList = new List<int>();
             elevatorServise = new ElevatorServise(num);
             Thread elevatorThread = new Thread(new ThreadStart(Move));
@@ -57,22 +55,22 @@ namespace Model.Entities {
                 }
                 elevatorServise.MoveElevator(targetFloor);
 
-                if (stateElevator == 0&&GlobalParametrs.fireAlarm) {
+                if (stateElevator == 0 && GlobalParametrs.fireAlarm) {
                     targetFloor = 1;
                 }
-                
 
-                if(stateElevator == 1 && !isMove) {
+
+                if (stateElevator == 1 && !isMove) {
                     stateElevator = 2;
                 }
-                if(stateElevator == 2) {
-                    SimulationSystemServise.WaitHuman((int)position,this);
-                    Thread.Sleep(1000*(int)Human.runTime+1000);
+                if (stateElevator == 2) {
+                    SimulationSystemServise.WaitHuman((int)position, this);
+                    Thread.Sleep(1000 * (int)Human.runTime + 1000);
                     stateElevator = 3;
                 }
-                
+
                 if (stateElevator == 4 && !isMove) {
-                    SimulationSystemServise.WaitHumanExit((int)position,this);
+                    SimulationSystemServise.WaitHumanExit((int)position, this);
                     Thread.Sleep(1000);
                     stateElevator = 3;
                 }
@@ -86,20 +84,20 @@ namespace Model.Entities {
                     targetList.RemoveAt(0);
                     stateElevator = 4;
                     totalTrips++;
-                    }
-               
                 }
+
             }
+        }
 
         public static void Create() {
             elevator = new List<Elevator>();
             for (int num = 0; num < ConfigData.countOfElevator; num++) {
                 elevator.Add(new Elevator(num));
-   
+
             }
 
-            
-            
+
+
 
 
         }

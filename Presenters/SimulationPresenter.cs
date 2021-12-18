@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Presenters.IViews;
-using Model.Entities;
+﻿using Model.Entities;
 using Model.Repositories;
-using Model;
+using Presenters.IViews;
+using System.Linq;
 namespace Presenters {
-    public class SimulationPresenter  {
+    public class SimulationPresenter {
         ISimulationView _simulationView;
-        
+
         public SimulationPresenter(ISimulationView simulationView) {
             _simulationView = simulationView;
         }
@@ -21,21 +16,21 @@ namespace Presenters {
             SimulationSystem.CountTime();
         }
         public void AddElevator() {
-            if (Elevator.elevator!=null)
+            if (Elevator.elevator != null)
                 for (int num = 0; num < ConfigData.countOfElevator; num++) {
-                _simulationView.DrawElevator(num, Elevator.elevator[num].position);
-            }
+                    _simulationView.DrawElevator(num, Elevator.elevator[num].position);
+                }
         }
         public void AddHuman() {
-            if (Human.humans!=null)
+            if (Human.humans != null)
                 for (int num = 0; num < Human.humans.Count(); num++) {
                     _simulationView.DrawHuman(Human.humans[num].startFloor, Human.humans[num].position, Human.humans[num].state, Human.humans[num].currFrame, Human.humans[num].targetFloor);
                 }
         }
 
         public void AddFire() {
-            _simulationView.DrawFire(GlobalParametrs.fireAlarm,GlobalParametrs.pause,ConfigData.countOfFloor,ConfigData.countOfElevator);
-        } 
+            _simulationView.DrawFire(GlobalParametrs.fireAlarm, GlobalParametrs.pause, ConfigData.countOfFloor, ConfigData.countOfElevator);
+        }
         public void Pause() {
             if (GlobalParametrs.pause) {
                 GlobalParametrs.pause = false;
@@ -59,8 +54,8 @@ namespace Presenters {
             return GlobalParametrs.time;
         }
         public void ShutdownCheck() {
-            for(int i = 0; i<ConfigData.countOfElevator; i++) {
-                if(Elevator.elevator[i].human.Count!=0|| Elevator.elevator[i].isMove) {
+            for (int i = 0; i < ConfigData.countOfElevator; i++) {
+                if (Elevator.elevator[i].human.Count != 0 || Elevator.elevator[i].isMove) {
                     _simulationView.ShowErrorMessage("Elevator is move!!!");
                     return;
                 }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Entities;
 using Presenters.IViews;
-using Model.Entities;
 namespace Presenters {
     public class HumanStatusPresenter {
         IHumanStatusView _humanStatus;
@@ -13,7 +8,7 @@ namespace Presenters {
             _humanStatus = humanStatus;
         }
 
-     
+
         public int CountOfHuman() {
             return Human.humans.Count;
         }

@@ -1,15 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Presenters;
 using Presenters.IViews;
-using Presenters;
+using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace WindowsForms {
     public partial class ConfigForm : Form, IConfigView {
@@ -25,9 +18,9 @@ namespace WindowsForms {
         }
 
         private void RunButton_Click(object sender, EventArgs e) {
-            presenter.CheckCorrect(countOfElevatorTextBox.Text,countOfFloorsTextBox.Text, strategyRadioButton.Checked
-            ,maxWeightTextBox.Text,speedValueTextBox.Text,accelerationValueTextBox.Text,ruleTextBox.Text);
-            
+            presenter.CheckCorrect(countOfElevatorTextBox.Text, countOfFloorsTextBox.Text, strategyRadioButton.Checked
+            , maxWeightTextBox.Text, speedValueTextBox.Text, accelerationValueTextBox.Text, ruleTextBox.Text);
+
         }
 
         public void Confirm() {
@@ -59,7 +52,7 @@ namespace WindowsForms {
                 w.WriteLine(speedValueTextBox.Text);
                 w.WriteLine(accelerationValueTextBox.Text);
                 w.WriteLine(ruleTextBox.Text);
-                
+
                 w.Flush();
                 w.Close();
             }
@@ -105,7 +98,7 @@ namespace WindowsForms {
             if (countOfElevatorTextBox.Text == "") {
                 countOfElevatorTextBox.Text = "   !  ";
             }
-                
+
         }
 
         private void countOfFloorsTextBox_Enter(object sender, EventArgs e) {

@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulationForm));
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hnwnhnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accelerateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,16 +41,6 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFloor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(962, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Simulation";
             // 
             // menuStrip1
             // 
@@ -142,7 +131,7 @@
             // 
             this.pictureBoxFloor.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxFloor.InitialImage = null;
-            this.pictureBoxFloor.Location = new System.Drawing.Point(470, 13);
+            this.pictureBoxFloor.Location = new System.Drawing.Point(484, 0);
             this.pictureBoxFloor.Name = "pictureBoxFloor";
             this.pictureBoxFloor.Size = new System.Drawing.Size(1434, 1016);
             this.pictureBoxFloor.TabIndex = 6;
@@ -170,7 +159,6 @@
             this.Controls.Add(this.ShutdownButton);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.pictureBoxFloor);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
@@ -186,8 +174,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hnwnhnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accelerateToolStripMenuItem;

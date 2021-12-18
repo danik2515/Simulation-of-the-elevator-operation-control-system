@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Entities;
+﻿using Model.Entities;
 using Model.Repositories;
+using System;
 namespace Model.Servises {
     public class ElevatorServise {
         private double time0;
@@ -17,7 +13,7 @@ namespace Model.Servises {
         private Elevator elevator { get; set; }
         public ElevatorServise(int _numberElevator) {
             numberElevator = _numberElevator;
- 
+
         }
         public void MoveElevator(int targetFloor) {
             elevator = Elevator.elevator[numberElevator];

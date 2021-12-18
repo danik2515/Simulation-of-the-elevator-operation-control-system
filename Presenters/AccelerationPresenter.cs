@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Repositories;
 using Presenters.IViews;
-using Model;
-using Model.Entities;
-using Model.Repositories;
+using System;
 
 namespace Presenters {
     public class AccelerationPresenter {

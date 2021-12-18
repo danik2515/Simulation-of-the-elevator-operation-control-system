@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Presenters;
 using Presenters.IViews;
-using Presenters;
+using System;
+using System.Windows.Forms;
 namespace WindowsForms {
     public partial class HumanStatusForm : Form, IHumanStatusView {
         HumanStatusPresenter presenter;
@@ -16,21 +9,21 @@ namespace WindowsForms {
             InitializeComponent();
             presenter = new HumanStatusPresenter(this);
             this.MaximizeBox = false;
-            for(int i = 0; i < presenter.CountOfHuman(); i++) {
-                HumanListBox.Items.Add(i+1);
+            for (int i = 0; i < presenter.CountOfHuman(); i++) {
+                HumanListBox.Items.Add(i + 1);
             }
         }
-        public void ShowStatus(int num, int state, int startFloor, int endFloor,double timeWait) {
+        public void ShowStatus(int num, int state, int startFloor, int endFloor, double timeWait) {
             HumanNumLable.Text = (num + 1).ToString();
             StartLable.Text = startFloor.ToString();
             TargetLable.Text = endFloor.ToString();
-            string txt="";
+            string txt = "";
             switch (state) {
                 case 0:
                     txt = "Wait elevator";
                     break;
                 case 1:
-                    txt ="Go toward press button";
+                    txt = "Go toward press button";
                     break;
                 case 2:
                     txt = "Start running";
@@ -51,17 +44,17 @@ namespace WindowsForms {
                     txt = "Out of the building";
                     break;
             }
-                
+
             StatusLable.Text = txt;
-            waitingTimeLable.Text = Math.Round(timeWait,2).ToString();
+            waitingTimeLable.Text = Math.Round(timeWait, 2).ToString();
         }
 
-       
 
-       
+
+
 
         private void timerStatus_Tick(object sender, EventArgs e) {
-            if(HumanListBox.SelectedIndex!=-1)
+            if (HumanListBox.SelectedIndex != -1)
                 presenter.GetStatus(HumanListBox.SelectedIndex);
         }
 
